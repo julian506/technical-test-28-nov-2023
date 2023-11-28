@@ -53,6 +53,12 @@ export class AppService {
       }
     });
 
+    if (Object.keys(result).length == 0) {
+      return {
+        message:
+          'There are not orders for the given customer in the given dates',
+      };
+    }
 
     return result;
   }
