@@ -9,7 +9,7 @@ datasource db {
 
 /// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
 model customers {
-  customer_number           Int
+  customer_number           Int @id
   customer_name             String   @db.VarChar(50)
   contact_last_name         String   @db.VarChar(50)
   contact_first_name        String   @db.VarChar(50)
@@ -22,8 +22,6 @@ model customers {
   country                   String   @db.VarChar(50)
   sales_rep_employee_number Int?
   credit_limit              Decimal? @db.Decimal(10, 2)
-
-  @@ignore
 }
 
 /// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
