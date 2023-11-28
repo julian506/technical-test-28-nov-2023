@@ -24,9 +24,19 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Technical test for a position as auxiliary student at IDEA.
+
+Some of the features are:
+
+* Get the products of each order of a given customer by it's number and that are between two given dates.
+* Validation of the types of the parameters sent in the body
+* Validates if the start date is earlier than the end date
+* Validates if the customer exists
+* Custom response when a customer has no orders
 
 ## Installation
+
+First, you must nstall the dependencies of the project using the next command:
 
 ```bash
 $ npm install
@@ -34,40 +44,20 @@ $ npm install
 
 ## Running the app
 
+Then, you must run the project using the next command:
+
 ```bash
 # development
 $ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
 ```
 
-## Test
+Now, you can send requests to the URI `localhost:3000/getOrderProductsByCustomerNumberAndDataRanges` using the next body:
 
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+```json
+{
+    "customerNumber": 141,
+    "startDate": "2003-01-31",
+    "endDate": "2004-02-01"
+}
 ```
 
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
