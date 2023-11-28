@@ -36,7 +36,7 @@ Some of the features are:
 
 ## Installation
 
-First, you must nstall the dependencies of the project using the next command:
+First, you must install the dependencies of the project using the next command:
 
 ```bash
 $ npm install
